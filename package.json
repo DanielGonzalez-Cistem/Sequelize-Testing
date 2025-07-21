@@ -1,0 +1,49 @@
+{
+  "name": "name-project",
+  "version": "1.0.0",
+  "description": "<project-description>",
+  "main": "src/main.ts",
+  "scripts": {
+    "start": "ts-node-dev --respawn --transpile-only --files -r tsconfig-paths/register --watch .env src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CistemInnovacion/<project>.git"
+  },
+  "keywords": [
+    "REST API",
+    "Node",
+    "JS",
+    "TS",
+    "API",
+    "Solutions"
+  ],
+  "author": "Cistem Innovacion <contacto@cisnerosgroup.com.mx>",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/CistemInnovacion/<project>/issues"
+  },
+  "homepage": "https://github.com/CistemInnovacion/<project>#readme",
+  "devDependencies": {
+    "@types/compression": "^1.7.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^24.0.10",
+    "morgan": "^1.10.0",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "compression": "^1.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "env-var": "^7.5.0",
+    "express": "^4.21.2",
+    "express-async-errors": "^3.1.1",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.0.0"
+  }
+}
