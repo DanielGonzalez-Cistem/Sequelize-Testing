@@ -19,11 +19,25 @@ export const WelcomeRouter = (): Router => {
      * Centralización de rutas del enrutador **Pruebas de Conexión**.
     */
     const paths = {
+        db: '/db',
         welcome: '/welcome'
     };
 
     /**
-     * * Servicio que realiza una prueba de conexión.
+     * * Servicio que realiza una prueba de conexión a base de datos.
+     * 
+     * @function
+     * @name GET /db
+     * @path {GET} /db
+     * @memberof welcomeRouter
+    */
+    welcomeRouter.get(
+        paths.db,
+        repositoryControllers('db')
+    );
+
+    /**
+     * * Servicio que realiza una prueba de conexión a servidor.
      * 
      * @function
      * @name GET /welcome

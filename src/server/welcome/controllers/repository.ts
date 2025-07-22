@@ -1,11 +1,15 @@
 import { Request, Response, NextFunction } from 'express';
 
+import { DbController } from './db.controller';
 import { WelcomeController } from './welcome.controller';
 
 /**
  * Difinición de tipos de controladores.
  */
-type TypeControllers = 'welcome';
+type TypeControllers = 
+    'db'       |
+    'welcome'
+;
 
 /**
  * Definición dinámica de los controladores en el espacio de trabajo **Welcome**.
@@ -18,6 +22,7 @@ type TypeAuthControllers = {
  * Centralización de enrutadores del servidor **Auth**.
  */
 const controllers: TypeAuthControllers = {
+    db: DbController,
     welcome: WelcomeController
 }
 

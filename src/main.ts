@@ -1,6 +1,5 @@
-import { rootEnvs } from '@env/handler';
-
 import { useSetupServer } from './server/setup';
+import path from 'path';
 
 /**
  * Inicio de aplicación **REST API**.

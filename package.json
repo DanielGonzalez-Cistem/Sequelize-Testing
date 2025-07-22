@@ -4,7 +4,10 @@
   "description": "<project-description>",
   "main": "src/main.ts",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only --files -r tsconfig-paths/register --watch .env src/main.ts"
+    "start": "ts-node-dev --respawn --transpile-only --files -r tsconfig-paths/register --watch .env src/main.ts",
+    "migrate": "sequelize-cli db:migrate --require ts-node/register",
+    "seed": "sequelize-cli db:seed:all --require ts-node/register",
+    "undo": "sequelize-cli db:migrate:undo --require ts-node/register"
   },
   "repository": {
     "type": "git",
@@ -31,10 +34,13 @@
     "@types/express": "^5.0.0",
     "@types/morgan": "^1.9.9",
     "@types/node": "^24.0.10",
+    "@types/sequelize": "^4.28.20",
     "morgan": "^1.10.0",
+    "sequelize-cli": "^6.6.3",
+    "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "compression": "^1.8.0",
@@ -44,6 +50,8 @@
     "express": "^4.21.2",
     "express-async-errors": "^3.1.1",
     "express-validator": "^7.2.1",
-    "helmet": "^8.0.0"
+    "helmet": "^8.0.0",
+    "sequelize": "^6.37.7",
+    "tedious": "^18.6.1"
   }
 }
