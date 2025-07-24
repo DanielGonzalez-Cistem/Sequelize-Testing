@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction, response } from 'express';
 
 import { models } from '@db/models/repository';
+import { IBaseFakeUser } from '@interfaces/fake.user.interface';
 import { statusCode } from '@utils/status_code/handler';
 
 /**
@@ -19,7 +20,9 @@ export const UsersController = async (req: Request, res: Response, next: NextFun
 
     const { FakeUser } = models;
 
-    const users = await FakeUser.findAll();
+    const users = await FakeUser.findAll({
+        attributes: ['idUser', 'email', 'createdAt'] as (keyof IBaseFakeUser)[],
+    });
 
     res.status(statusCode.OK);
     res.json({
