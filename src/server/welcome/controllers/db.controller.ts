@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-import { dbConnection } from '@db/config/connection';
+import { dbConnection } from '@db/config/db.connection';
 import { statusCode } from '@utils/status_code/handler';
 
 /**

@@ -124,10 +124,6 @@
   "exclude": ["node_modules", "dist"],
   "include": [
     "src/**/*",
-    "src/dependencies/db/config/**/*",
-    "src/dependencies/db/migrations/**/*",
-    "src/dependencies/db/models/**/*",
-    "src/dependencies/db/seeders/**/*",
     "src/dependencies/types/app.d.ts",
     "src/dependencies/types/dependencies.d.ts",
     "src/dependencies/types/errors.d.ts",

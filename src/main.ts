@@ -1,5 +1,4 @@
 import { useSetupServer } from './server/setup';
-import path from 'path';
 
 /**
  * Inicio de aplicación **REST API**.
@@ -13,7 +12,7 @@ const mainApp = (): void => {
 
     const { deploy: deployServer } = useSetupServer();
 
-    deployServer()
+    deployServer();
 
     console.log(`\n🟢 Sequelize Testing ha sido inicializado...\n`);
 

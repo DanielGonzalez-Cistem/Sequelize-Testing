@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 
 import { DbController } from './db.controller';
+import { UsersController } from './users.controller';
 import { WelcomeController } from './welcome.controller';
 
 /**
@@ -8,6 +9,7 @@ import { WelcomeController } from './welcome.controller';
  */
 type TypeControllers = 
     'db'       |
+    'users'    |
     'welcome'
 ;
 
@@ -23,6 +25,7 @@ type TypeAuthControllers = {
  */
 const controllers: TypeAuthControllers = {
     db: DbController,
+    users: UsersController,
     welcome: WelcomeController
 }
 

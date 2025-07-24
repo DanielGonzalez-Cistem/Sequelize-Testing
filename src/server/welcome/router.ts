@@ -20,6 +20,7 @@ export const WelcomeRouter = (): Router => {
     */
     const paths = {
         db: '/db',
+        users: '/users',
         welcome: '/welcome'
     };
 
@@ -34,6 +35,19 @@ export const WelcomeRouter = (): Router => {
     welcomeRouter.get(
         paths.db,
         repositoryControllers('db')
+    );
+
+    /**
+     * * Servicio que realiza una prueba de conexión a base de datos.
+     * 
+     * @function
+     * @name GET /users
+     * @path {GET} /users
+     * @memberof welcomeRouter
+    */
+    welcomeRouter.get(
+        paths.users,
+        repositoryControllers('users')
     );
 
     /**

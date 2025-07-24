@@ -18,7 +18,11 @@ export const WelcomeController = async (req: Request, res: Response, next: NextF
 
     res.status(statusCode.OK);
     res.json({
-        message: `¡Bienvenido a Sequelize Testing! :D`
+        success: true,
+        status_code: statusCode.OK,
+        response: {
+            message: '¡Bienvenido a Sequelize Testing! :D'
+        }
     });
     res.end();
 
