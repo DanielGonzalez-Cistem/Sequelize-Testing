@@ -1,10 +1,5 @@
 'use strict';
 
-require('dotenv').config();
-
-const { DateTime } = require('luxon');
-// const { Sequelize } = require('sequelize');
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
@@ -23,9 +18,6 @@ module.exports = {
 
     await queryInterface.bulkInsert('ST_FakeUsers', users.map(correo => ({
       Correo: correo,
-      // FechaAlta: DateTime.fromMillis(new Date().getTime(), { zone: process.env.TIMEZONE }).toISO({ includeOffset: false })
-      // FechaAlta: DateTime.local().toFormat('yyyy-MM-dd HH:mm:ss.SSS')
-      // FechaAlta: Sequelize.literal("CONVERT(VARCHAR(23), GETDATE(), 121)")
     })), {});
   },
 
